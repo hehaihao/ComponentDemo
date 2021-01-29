@@ -1,0 +1,6 @@
+include ':export_cart'
+include ':Cart'
+include ':Home'
+include ':Common'
+include ':app'
+rootProject.name = "ComponentDemo"
