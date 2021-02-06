@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
+    <include layout="@layout/layout_base_top_bar"/>
+
     <TextView
         android:id="@+id/tv_page_name"
         android:layout_width="wrap_content"

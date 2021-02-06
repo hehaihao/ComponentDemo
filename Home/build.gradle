@@ -3,6 +3,7 @@ if (isModule.toBoolean()){
 }else {
     apply plugin: 'com.android.library'
 }
+apply plugin: 'com.jakewharton.butterknife'
 
 android {
     compileSdkVersion 30
@@ -61,6 +62,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.1'
+
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
     //依赖Common组件
     implementation project(path: ':Common')
     implementation project(path: ':export_cart')

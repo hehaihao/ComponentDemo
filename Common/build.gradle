@@ -82,7 +82,7 @@ dependencies {
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.1'
 
     //butterknife
-    implementation 'com.jakewharton:butterknife:10.2.3'
+    api 'com.jakewharton:butterknife:10.2.3'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
 
     //retrofit和OKhttp配置
