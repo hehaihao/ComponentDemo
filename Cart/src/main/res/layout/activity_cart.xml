@@ -6,10 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".CartActivity">
 
+    <include layout="@layout/layout_base_top_bar"/>
+
     <TextView
         android:id="@+id/tv_page_title"
         android:layout_width="wrap_content"
         android:layout_height="100dp"
+        android:layout_marginTop="50dp"
         android:text="Cart"
         android:gravity="center"
         android:textSize="30sp"

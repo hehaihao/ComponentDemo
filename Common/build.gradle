@@ -47,10 +47,30 @@ dependencies {
     // arouter-compiler 的注解依赖需要所有使用 ARouter 的 module 都添加依赖
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.1'
 
-    //AppLifecycle
-    api 'com.github.hufeiyang.Android-AppLifecycleMgr:applifecycle-api:1.0.4'
-
     //butterknife
     implementation 'com.jakewharton:butterknife:10.2.3'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+
+    //retrofit和OKhttp配置
+    api 'com.squareup.retrofit2:retrofit:2.8.1'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    api 'com.squareup.retrofit2:converter-gson:2.8.1'
+    api 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    api 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    api 'com.squareup.retrofit2:converter-scalars:2.8.1'
+
+    api 'com.github.bumptech.glide:glide:3.7.0'
+    api 'jp.wasabeef:glide-transformations:2.0.1'
+    //okSocket
+    api 'com.tonystark.android:socket:4.2.3'
+
+    api "org.greenrobot:eventbus:3.1.1"
+
+    api 'androidx.recyclerview:recyclerview:1.1.0'
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-21'
+
+    api 'com.github.tbruyelle:rxpermissions:0.10.2'
+    api 'com.jakewharton.rxbinding:rxbinding:1.0.0'
+    api 'androidx.multidex:multidex:2.0.1'
 }

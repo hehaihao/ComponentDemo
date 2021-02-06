@@ -9,6 +9,10 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
+        if (isModule.toBoolean()) {
+            // 独立调试时添加 applicationId ，集成调试时移除
+            applicationId "com.hhh.cart"
+        }
         minSdkVersion 19
         targetSdkVersion 30
         versionCode 1
@@ -21,11 +25,6 @@ android {
             annotationProcessorOptions {
                 arguments = [AROUTER_MODULE_NAME: project.getName()]
             }
-        }
-
-        if (isModule.toBoolean()) {
-            // 独立调试时添加 applicationId ，集成调试时移除
-            applicationId "com.hhh.cart"
         }
     }
 
@@ -46,6 +45,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    // Butterknife requires Java 8.
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -60,6 +65,5 @@ dependencies {
     //依赖Common组件
     implementation project(path: ':Common')
     implementation project(path: ':export_cart')
-    annotationProcessor 'com.github.hufeiyang.Android-AppLifecycleMgr:applifecycle-compiler:1.0.4'
 
 }

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="app_theme_oc">#FF4E00</color>
+    <color name="app_theme_eth">#66079de8</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+
+    <color name="app_theme">#2D2A31</color>
+
+    <!--    zxing-->
+    <color name="result_view">#B0000000</color>
+    <color name="viewfinder_frame">#90FFFFFF</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_point_color">#C0FFFF00</color>
+
+    <!--覆盖颜色-->
+    <color name="bgColor_overlay">#60000000</color>
+    <color name="bgColor_overlay_black">#95000000</color>
+    <!--窗口背景颜色-->
+    <color name="bgColor_svprogressdefaultview">@android:color/white</color>
+    <!--标题颜色-->
+    <color name="textColor_svprogresshuddefault_msg">#000000</color>
+    <color name="roundColor_svprogresshuddefault">#e5e5e5</color>
+    <color name="roundProgressColor_svprogresshuddefault">@android:color/black</color>
+
+
+    <color name="grey_e3">#e3e3e3</color>
+    <color name="grey_eee">#eee</color>
+    <color name="grey_eee_30a">#4deeeeee</color>
+
+
+    <color name="black_3a">#08000000</color>
+    <color name="white_60a">#99ffffff</color>
+    <color name="black_30a">#4d000000</color>
+    <color name="black_40a">#66000000</color>
+    <color name="black_60a">#99000000</color>
+    <color name="black_70a">#b3000000</color>
+    <color name="black_80a">#cc000000</color>
+    <color name="black_90a">#e6000000</color>
+
+    <color name="grey333_40a">#66333333</color>
+    <color name="grey333">#333</color>
+    <color name="grey666">#666</color>
+    <color name="grey999">#999</color>
+    <color name="greycb_60a">#99cbcbcb</color>
+    <color name="greycb">#cbcbcb</color>
+    <color name="greyca">#cacaca</color>
+    <color name="grey8d">#8d8d8d</color>
+    <color name="grey7a797b">#7a797b</color>
+
+    <color name="red_e5">#e52b00</color>
+    <color name="red">#ff0000</color>
+    <color name="red_99e52222">#99e52222</color>
+
+    <color name="color_f7f7f7">#f7f7f7</color>
+    <color name="color_cacaca">#cacaca</color>
+
+    <color name="color_048bd9">#048BD9</color>
+    <color name="color_2a77c7">#2A77C7</color>
+    <color name="color_49637e">#49637e</color>
+    <color name="color_6086fe">#6086fe</color>
+    <color name="color_f6fcff">#f6fcff</color>
+    <color name="color_058cd9">#058cd9</color>
+    <color name="color_058cd9_80a">#cc058cd9</color>
+    <color name="color_eef9ff">#eef9ff</color>
+    <color name="color_59048bd9">#59048bd9</color>
+    <color name="grey_cf">#cfcfcf</color>
+</resources>

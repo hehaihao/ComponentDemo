@@ -1,0 +1,10 @@
+<resources>
+    <string name="copy_success">已复制</string>
+
+    <string name="ultra_down_list_header_default_text">下拉刷新</string>
+    <string name="ultra_down_list_header_release_text">释放刷新</string>
+    <string name="ultra_down_list_header_refresh_text">正在加载...</string>
+    <string name="ultra_down_list_header_complete_text">刷新完成</string>
+
+    <string name="qrcode_save_successfully">收款二维码已保存到手机相册</string>
+</resources>
