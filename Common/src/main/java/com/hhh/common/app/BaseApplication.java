@@ -61,10 +61,10 @@ public abstract class BaseApplication extends MultiDexApplication {
     }
 
     public String initBaseUrl() {
-        return "http://testsercviceapi.weecot.com:9086/v_1_0_1/";
+        return BuildConfig.HTTP_BASE_URL;
     }
 
     public String initTraceBaseUrl() {
-        return "http://testchip.weecot.com:9082/v_1_0_1/";
+        return BuildConfig.HTTP_TRACE_BASE_URL;
     }
 }

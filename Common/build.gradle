@@ -1,6 +1,10 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.jakewharton.butterknife'
 
+Properties properties = new Properties()
+def writer = rootProject.file('blockuser_config.properties')
+properties.load(writer.newDataInputStream())
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
@@ -22,9 +26,39 @@ android {
     }
 
     buildTypes {
+        //公共配置
+        commons{
+            buildConfigField("String", "WX_APPID", properties.getProperty("WX_APPID"))
+            buildConfigField("String", "WX_APP_SECRET", properties.getProperty("WX_APP_SECRET"))
+            buildConfigField("String", "UMENG_APPKEY", properties.getProperty("UMENG_APPKEY"))
+            matchingFallbacks = ['debug','release']
+        }
+        release.initWith(buildTypes.commons)
         release {
+            debuggable false
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "HTTP_BASE_URL", properties.getProperty("HTTP_BASE_RELEASE"))
+            buildConfigField("String", "HTTP_TRACE_BASE_URL", properties.getProperty("HTTP_TRACE_BASE_RELEASE"))
+            buildConfigField("String", "URL_HEAD_CHIP", properties.getProperty("URL_HEAD_RELEASE_CHIP"))
+            buildConfigField("String", "URL_HEAD_CHIP_TRACE", properties.getProperty("URL_HEAD_CHIP_TRACE"))
+            buildConfigField("String", "TRACE_H5_URL", properties.getProperty("TRACE_H5_BASE_URL_RELEASE"))
+            buildConfigField("String", "URL_HEAD_QRCODE", properties.getProperty("URL_HEAD_QRCODE_RELEASE"))
+            buildConfigField("String", "BROWSER_URL", properties.getProperty("BROWSER_URL_RELEASE"))
+        }
+
+        //开发运行用
+        debug.initWith(buildTypes.commons)
+        debug {
+            debuggable true
+            minifyEnabled false
+            buildConfigField("String", "HTTP_BASE_URL", properties.getProperty("HTTP_BASE_DEBUG"))
+            buildConfigField("String", "HTTP_TRACE_BASE_URL", properties.getProperty("HTTP_TRACE_BASE_DEBUG"))
+            buildConfigField("String", "URL_HEAD_CHIP", properties.getProperty("URL_HEAD_DEBUG_CHIP"))
+            buildConfigField("String", "URL_HEAD_CHIP_TRACE", properties.getProperty("URL_HEAD_CHIP_TRACE"))
+            buildConfigField("String", "TRACE_H5_URL", properties.getProperty("TRACE_H5_BASE_URL_DEBUG"))
+            buildConfigField("String", "URL_HEAD_QRCODE", properties.getProperty("URL_HEAD_QRCODE_DEBUG"))
+            buildConfigField("String", "BROWSER_URL", properties.getProperty("BROWSER_URL_DEBUG"))
         }
     }
 
