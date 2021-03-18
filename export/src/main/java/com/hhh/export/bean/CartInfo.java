@@ -1,4 +1,4 @@
-package com.hhh.export_cart.bean;
+package com.hhh.export.bean;
 
 /**
  * @Description:

@@ -10,8 +10,8 @@ import android.widget.TextView;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.hhh.common.app.activity.BaseComActivity;
-import com.hhh.export_cart.CartServiceUtil;
-import com.hhh.export_cart.router.CartRouterTable;
+import com.hhh.export.CartServiceUtil;
+import com.hhh.export.router.CartRouterTable;
 
 @Route(path = "/homepage/homeActivity")
 public class HomeActivity extends BaseComActivity {
@@ -31,7 +31,7 @@ public class HomeActivity extends BaseComActivity {
             @Override
             public void onClick(View v) {
                 //通过路由跳转到 购物车组件的购物车页面（但没有依赖购物车组件）
-                CartServiceUtil.navigateCartPage("param1", "param1");
+                CartServiceUtil.navigateCartPage("param1", "param2");
             }
         });
         //调用购物车组件服务：获取购物车商品数量

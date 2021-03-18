@@ -66,6 +66,6 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
     //依赖Common组件
     implementation project(path: ':Common')
-    implementation project(path: ':export_cart')
+    implementation project(path: ':export')
 
 }
